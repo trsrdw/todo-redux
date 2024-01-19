@@ -1,0 +1,132 @@
+.outer {
+  padding: 3rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ff9068;
+  background: linear-gradient(45deg, #fd746c, #ff9068);
+  height: 100vh;
+}
+
+.container {
+  min-width: 480px;
+  max-width: 50%;
+  background: #fafafa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(25, 25, 25, .25);
+  padding: 2rem;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 24px;
+}
+
+.inputContainer {
+  display: flex;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.input {
+  flex-grow: 1;
+  width: 100%;
+  border-radius: 5px;
+  padding: .5rem 1rem;
+  background: #e8ebed;
+  margin: 0;
+  outline: 0;
+  border: 2px solid #e8ebed;
+  transition: background .25s ease-out;
+  font-size: 14px;
+}
+
+.input:focus {
+  background: none;
+}
+
+.input:focus+.buttonadd {
+  opacity: 1;
+  transform: translate(50%, -50%) scale(1) rotate(0deg);
+}
+
+.buttonadd {
+  text-align: center;
+  color: #fafafa;
+  line-height: 1;
+  position: absolute;
+  font-size: 150%;
+  right: 0;
+  top: 50%;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  background: #2ecc71;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  transform: translate(0, -50%) scale(0) rotate(180deg);
+  transition: transform, opacity, .5s cubic-bezier(.87, -.41, .19, 1.44);
+}
+
+.buttonadd:focus {
+  opacity: 1;
+  transform: translate(50%, -50%) scale(1.1) rotate(0deg);
+}
+
+.buttonadd:active {
+  opacity: 1;
+  transition: transform, opacity, .1s cubic-bezier(.87, -.41, .19, 1.44);
+  transform: translate(50%, -50%) scale(0.95) rotate(0deg);
+}
+
+.button {
+  padding: 0;
+  font-size: 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  margin-left: 10px;
+  cursor: pointer;
+  height: 48px;
+  width: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.li {
+  padding: 10px;
+  font-size: 14px;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+  list-style: none;
+}
+
+.li:last-child {
+  border-bottom: none;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+}
